@@ -1,0 +1,51 @@
+<div class="headerbar">
+    <div class="header1000px">
+        <div class="headerlogo">
+            <img src="./assets/img/logo.png" alt="">
+            <h1>
+                <span>B</span>
+                <span>u</span>
+                <span>t</span>
+                <span>t</span>
+                <span>o</span>
+                <span>n</span>
+                <span>&</span>
+                <span>P</span>
+                <span>e</span>
+                <span>a</span>
+                <span>r</span>
+                <span>l</span>
+            </h1>
+        </div>
+        <div class="headermenu">
+            <a href="#">Home</a>
+            <a href="#">Über uns</a>
+            <a href="#">Produkte</a>
+            <a href="#">Reviev</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="headeruserbasket">
+            <button class="user" mat-icon-button>
+            <mat-icon>person</mat-icon>
+          </button>
+            <button class="shopping_cart" mat-icon-button>
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+        </div>
+        <div class="headerresponse" (click)="openMenu()" [class.d-none]="isOpen">
+            <img src="./assets/img/menu.png">
+        </div>
+    </div>
+    <div class="hidden-menu" [class.slidein]="isOpen" [class.slideout]="!isOpen">
+        <div class="hidden-header-about">
+            <a href="#about" (click)="closeMenu()">Home</a>
+            <a href="#skills" (click)="closeMenu()">Über uns</a>
+            <a href="#portfolio" (click)="closeMenu()">Produkte</a>
+            <a routerLink="/imprint" (click)="closeMenu()">Reviev</a>
+            <a routerLink="/imprint" (click)="closeMenu()">Contact</a>
+        </div>
+        <div class="close-menu" (click)="closeMenu()">
+            <img src="./assets/img/close.png">
+        </div>
+    </div>
+</div>
