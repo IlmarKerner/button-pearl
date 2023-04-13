@@ -8,12 +8,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadComponent } from './head/head.component';
+import { StartComponent } from './start/start.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderbarComponent,
-    HeadComponent
+    HeadComponent,
+    StartComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
