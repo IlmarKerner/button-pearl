@@ -8,6 +8,11 @@
     src: url('./assets/fonts/Roboto-Medium.ttf');
 }
 
+@font-face {
+    font-family: 'LeckerliOne';
+    src: url('./assets/fonts/LeckerliOne-Regular.ttf');
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -33,4 +38,16 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #C7CBD4;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #B67796;
 }

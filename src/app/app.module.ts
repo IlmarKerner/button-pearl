@@ -10,6 +10,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadComponent } from './head/head.component';
 import { StartComponent } from './start/start.component';
 import { FooterComponent } from './footer/footer.component';
+import { FirstcontentComponent } from './firstcontent/firstcontent.component';
+import { SecondcontentComponent } from './secondcontent/secondcontent.component';
+import { ThirdcontentComponent } from './thirdcontent/thirdcontent.component';
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,13 +23,19 @@ import { FooterComponent } from './footer/footer.component';
     HeaderbarComponent,
     HeadComponent,
     StartComponent,
-    FooterComponent
+    FooterComponent,
+    FirstcontentComponent,
+    SecondcontentComponent,
+    ThirdcontentComponent,
+    ContactComponent
   ],
   imports: [
+    FormsModule, 
     BrowserModule,
     MatIconModule,
     MatButtonModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule
   ],
   providers: [],

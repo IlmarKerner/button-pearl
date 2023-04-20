@@ -1,0 +1,115 @@
+.firstcontentarea {
+    min-height: 500px;
+    width: 100%;
+    position: relative;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    @media(max-width: 1550px) {
+        min-height: 400px;
+    }
+    @media(max-width: 1200px) {
+        min-height: 300px;
+    }
+    @media(max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.cards {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    @media(max-width: 1550px) {
+        width: 350px;
+        height: 270px;
+    }
+    @media(max-width: 1380px) {
+        width: 300px;
+        height: 220px;
+    }
+    @media(max-width: 1200px) {
+        width: 250px;
+        height: 180px;
+    }
+}
+
+.firstcontentcard {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    transition: left 0.25s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+    @media(max-width: 1000px) {
+        left: 5%;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        &:hover {
+            transition: all 175ms ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 120%;
+        color: red;
+        position: absolute;
+        font-family: 'LeckerliOne';
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+.secondcontentcard {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    img {
+        width: 100%;
+        height: 100%;
+        &:hover {
+            transition: all 175ms ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 120%;
+        color: red;
+        position: absolute;
+        font-family: 'LeckerliOne';
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+.thirdcontentcard {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    transition: right 0.25s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+    @media(max-width: 1000px) {
+        right: 5%;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        &:hover {
+            transition: all 175ms ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 120%;
+        color: red;
+        position: absolute;
+        font-family: 'LeckerliOne';
+        bottom: 10px;
+        right: 10px;
+    }
+}
