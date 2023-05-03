@@ -3,12 +3,44 @@
         <h1>New Items</h1>
     </div>
     <div class="cards">
-        <div class="cardcontent" *ngFor="let item of items" (click)="openShoppingCard()">
+        <div class="cardcontent" *ngFor="let item of items" (click)="openShoppingCard(item)">
             <img src="{{ item.image }}">
             <h2>{{ item.description }}</h2>
             <h3>{{ item.price }},- €</h3>
-            <div class="addToBasket" (click)="addToBasket()">
-                <button>Add to basket</button>
+            <div class="addToBasket">
+                <button>Detailansicht</button>
+            </div>
+        </div>
+    </div>
+    <div class="contentDetailCard" *ngIf="showBasketCard" (click)="closeShoppingCard(selectedProduct)">
+
+
+        <div class="basketContent" onclick="event.stopPropagation()">
+            <div class="selections">
+                <div class="firstSelection">
+                    <label for="size">Größen:</label>
+                    <select id="sizes" name="size" [(ngModel)]="selectedSize">
+                        <option *ngFor="let productSize of sizeList" [value]="productSize">{{ productSize.sizeNumber  }} / {{ productSize.sizeLetter }} </option>
+                    </select>
+                </div>
+                <div class="secondSelection">
+                    <label for="innerFabric">Futterstoffe:</label>
+                    <select id="innerFabric" name="innerFabric" [(ngModel)]="selectedInnerFabric">
+                        <option *ngFor="let fabric of innerFabricList" [value]="fabric"><img [src]="fabric.fabricImage"> - {{ fabric.fabricName }} </option>
+                    </select>
+                </div>
+            </div>
+            <h1>{{ selectedProduct.description }}</h1>
+            <div class="basketlayout">
+                <div class="leftside">
+                    <img [src]="selectedImage">
+                </div>
+            </div>
+            <div class="imageSelection">
+                <img *ngFor="let image of selectedProduct.images" [src]="image" (click)="selectImage(image)">
+            </div>
+            <div class="closeDetailCard">
+                <img src="./assets/img/close.png" (click)="closeShoppingCard(selectedProduct)">
             </div>
         </div>
     </div>

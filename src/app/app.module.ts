@@ -16,6 +16,8 @@ import { ThirdcontentComponent } from './thirdcontent/thirdcontent.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BasketCardComponent } from './basket-card/basket-card.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     FirstcontentComponent,
     SecondcontentComponent,
     ThirdcontentComponent,
-    ContactComponent
+    ContactComponent,
+    BasketCardComponent
   ],
   imports: [
-    FormsModule, 
+    FormsModule,
+    MatDialogModule, 
     BrowserModule,
     MatIconModule,
     MatButtonModule,
